@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rezeptAuswahlRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <!-- Kopfbereich -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:background="@color/white"
+        android:paddingTop="16dp"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:id="@+id/pageTitle"
+            style="@style/StandardTitel"
+            android:text="Artikel auswählen/ändern" />
+    </LinearLayout>
+
+    <!-- Trennlinie -->
+    <View style="@style/StandardTrennlinie" />
+
+    <!-- Scrollbarer Inhalt -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:background="@color/bg_gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Suchfeld -->
+            <EditText
+                android:id="@+id/etSuche"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Artikel suchen..."
+                android:inputType="text"
+                android:drawableStart="@android:drawable/ic_menu_search"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_card"
+                android:textColor="@android:color/black" />
+
+            <!-- Bereich mit Pfeilen und Artikel-Scroll -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_card"
+                android:padding="12dp">
+
+                <!-- Pfeil hoch -->
+                <Button
+                    android:id="@+id/btnScrollUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text="▲"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_gravity="end"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:elevation="4dp" />
+
+                <!-- Zutatenliste -->
+                <ScrollView
+                    android:id="@+id/artikelScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:fadeScrollbars="false"
+                    android:scrollbars="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/containerAusgewaehlteZutaten"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:divider="@android:color/darker_gray"
+                        android:showDividers="middle" />
+                </ScrollView>
+
+                <!-- Pfeil runter -->
+                <Button
+                    android:id="@+id/btnScrollDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text="▼"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_gravity="end"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:elevation="4dp"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Fester Buttonbereich -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="120dp"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@color/bg_gray"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/btnSpeichernUndZurueck"
+            style="@style/StandardButton"
+            android:text="✔ Speichern und zurück"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>

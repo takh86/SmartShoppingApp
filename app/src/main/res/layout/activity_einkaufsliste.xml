@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <!-- Weißer Kopfbereich mit Titel -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/pageTitle"
+            style="@style/StandardTitel"
+            android:text="@string/title_einkaufsliste" />
+    </LinearLayout>
+
+    <!-- Trennlinie -->
+    <View style="@style/StandardTrennlinie" />
+
+    <!-- Grauer Hintergrundbereich -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bg_gray"
+        android:padding="24dp">
+
+        <!-- ListView -->
+        <ListView
+            android:id="@+id/lvEinkaufslisten"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnListeHinzufuegen"
+            android:divider="@color/trennline_gray"
+            android:dividerHeight="1dp"
+            android:background="@android:color/transparent" />
+
+        <!-- Vorlage verwenden -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnVorlageVerwenden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:src="@android:drawable/ic_menu_save"
+            app:backgroundTint="@color/fab_green"
+            app:tint="@android:color/white"
+            android:contentDescription="@string/vorlage_verwenden" />
+
+        <!-- Neue Liste hinzufügen -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnListeHinzufuegen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:src="@android:drawable/ic_input_add"
+            app:backgroundTint="@color/fab_green"
+            app:tint="@android:color/white"
+            android:contentDescription="@string/neue_liste" />
+    </RelativeLayout>
+</LinearLayout>

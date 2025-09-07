@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <!-- Weißer Kopfbereich mit Titel -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/pageTitle"
+            style="@style/StandardTitel"
+            android:text="Rezept anzeigen" />
+    </LinearLayout>
+
+    <!-- Trennlinie unter dem Kopf -->
+    <View style="@style/StandardTrennlinie" />
+
+    <!-- Gesamter grauer Bereich für Inhalt + Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/bg_gray">
+
+        <!-- Scrollbarer Inhalt -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="24dp"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Rezeptinhalt -->
+                <TextView
+                    android:id="@+id/tvRezeptDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textColor="@color/black"
+                    android:textAlignment="viewStart" />
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Unten fixierte Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/btnSpeichern"
+                style="@style/StandardButton"
+                android:text="Speichern"
+                android:visibility="gone"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnBearbeiten"
+                style="@style/StandardButton"
+                android:text="Bearbeiten"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnLoeschen"
+                style="@style/StandardButton"
+                android:text="Löschen"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

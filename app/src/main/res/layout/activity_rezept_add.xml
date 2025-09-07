@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <!-- Kopfbereich (weiß) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingTop="12dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/pageTitle"
+            style="@style/StandardTitel"
+            android:text="Rezept anlegen/ändern" />
+    </LinearLayout>
+
+    <!-- Trennlinie -->
+    <View style="@style/StandardTrennlinie" />
+
+    <!-- Grauer Bereich unterhalb der Trennlinie -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="24dp"
+        android:background="@color/bg_gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/etRezeptName"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:hint="z. B. Nudeln"
+                    android:backgroundTint="@color/fab_green"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Kategorie -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kategorie"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="8dp" />
+
+                <Spinner
+                    android:id="@+id/spKategorie"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <!-- Dauer -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dauer" android:textColor="@color/black" android:layout_marginEnd="12dp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 min" android:textColor="@color/black" android:layout_marginEnd="8dp" />
+                <SeekBar android:id="@+id/seekBarDauer" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:max="20" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5 h" android:textColor="@color/black" android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDauerWert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="0 Minuten"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <!-- Personen -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Personen" android:textColor="@color/black" android:layout_marginEnd="12dp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1" android:textColor="@color/black" android:layout_marginEnd="8dp" />
+                <SeekBar android:id="@+id/seekBarPersonen" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:max="9" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10" android:textColor="@color/black" android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPersonenWert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="1 Person"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <!-- Beschreibung -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beschreibung:"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp" />
+
+            <EditText
+                android:id="@+id/etRezeptBeschreibung"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="Beschreibung des Rezepts"
+                android:gravity="top"
+                android:backgroundTint="@color/fab_green"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Zutaten -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zutaten:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:id="@+id/containerZutaten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:divider="@android:color/darker_gray"
+                android:showDividers="middle"
+                android:layout_marginBottom="16dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Buttonbereich am unteren Rand -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@color/bg_gray">
+
+        <Button
+            android:id="@+id/btnZutatenAuswaehlen"
+            style="@style/StandardButton"
+            android:text="Artikel auswählen" />
+
+        <Button
+            android:id="@+id/btnSpeichern"
+            style="@style/StandardButton"
+            android:text="Speichern" />
+    </LinearLayout>
+</LinearLayout>

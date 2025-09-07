@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <!-- Weißer Kopfbereich mit Logo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="wrap_content"
+                android:layout_height="72dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/logo" />
+        </LinearLayout>
+
+        <!-- Trennlinie -->
+        <View style="@style/StandardTrennlinie" />
+
+        <!-- Buttons und Tagesgericht -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_gray"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Buttons -->
+            <Button
+                android:id="@+id/btnArtikel"
+                android:text="@string/title_artikel"
+                style="@style/StandardButton" />
+
+            <Button
+                android:id="@+id/btnRezept"
+                android:text="@string/title_rezept"
+                style="@style/StandardButton" />
+
+            <Button
+                android:id="@+id/btnSpeiseplan"
+                android:text="@string/title_speiseplan"
+                style="@style/StandardButton" />
+
+            <Button
+                android:id="@+id/btnEinkaufsliste"
+                android:text="@string/title_einkaufsliste"
+                style="@style/StandardButton" />
+
+            <!-- Trennlinie -->
+            <View
+                android:layout_marginTop="30dp"
+                style="@style/StandardTrennlinie"
+                android:layout_height="2dp"
+                android:background="@color/fab_green" />
+
+            <!-- Anzeige Tagesgericht -->
+            <TextView
+                android:id="@+id/tagesgerichtText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="24dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text=""
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:lineSpacingExtra="8dp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

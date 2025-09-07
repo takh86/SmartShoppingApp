@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/speiseplanScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <!-- Weißer Kopfbereich mit Titel -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/pageTitle"
+                style="@style/StandardTitel"
+                android:text="@string/title_speiseplan" />
+        </LinearLayout>
+
+        <!-- Trennlinie -->
+        <View style="@style/StandardTrennlinie" />
+
+        <!-- RecyclerView-Bereich -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_gray"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerSpeiseplan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:clipToPadding="false"
+                android:scrollbars="vertical" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

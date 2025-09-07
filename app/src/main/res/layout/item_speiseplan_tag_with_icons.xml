@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@android:color/transparent">
+
+    <!-- Kopfbereich mit Wochentag, Plus-Button, Löschen-Button und Pfeil -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp">
+
+        <TextView
+            android:id="@+id/tvWochentag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Montag"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <!-- Pfeil zum Ein-/Ausklappen -->
+        <ImageView
+            android:id="@+id/iconExpand"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:layout_centerVertical="true"
+            android:contentDescription="Expand icon"
+            android:src="@drawable/ic_arrow_up_black" />
+
+        <!-- Plus-Button zum Hinzufügen -->
+        <ImageButton
+            android:id="@+id/btnAddMeal"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="72dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="Speise hinzufügen"
+            android:src="@drawable/ic_add_circle" />
+
+        <!-- 🗑️ Löschen-Button -->
+        <ImageButton
+            android:id="@+id/btnDeleteMeal"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="120dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:contentDescription="Speisen löschen"
+            android:src="@android:drawable/ic_menu_delete"
+            android:tint="@android:color/holo_red_dark" />
+    </RelativeLayout>
+
+    <!-- Detailbereich mit Rezeptinfos -->
+    <LinearLayout
+        android:id="@+id/detailContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvVorspeise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vorspeise: -" />
+
+        <TextView
+            android:id="@+id/tvHauptspeise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hauptspeise: -" />
+
+        <TextView
+            android:id="@+id/tvBelg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beilage 1: -" />
+
+        <TextView
+            android:id="@+id/tvBelg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beilage 2: -" />
+
+        <TextView
+            android:id="@+id/tvNachspeise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nachspeise: -" />
+    </LinearLayout>
+</LinearLayout>

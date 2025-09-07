@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Basis-Theme für die App -->
+    <style name="Base.Theme.SmartShoppingApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Du kannst hier Farben setzen, falls nötig -->
+    </style>
+
+    <!-- SPEZIAL: Theme für schwarzer Uhr -->
+    <style name="Theme.SmartShoppingApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+        <!-- Optional eigene Farben -->
+        <item name="colorPrimary">@color/fab_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Splashscreen -->
+        <item name="android:windowSplashScreenBackground">@color/white</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/logo2</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/white</item>
+    </style>
+</resources>
+
+

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <!-- Weißer Kopfbereich mit Titel -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/pageTitle"
+            style="@style/StandardTitel"
+            android:text="Artikel anzeigen" />
+    </LinearLayout>
+
+    <!-- Trennlinie unter dem Kopf -->
+    <View style="@style/StandardTrennlinie" />
+
+    <!-- Gesamter grauer Bereich für Inhalt + Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/bg_gray">
+
+        <!-- Scrollbarer Artikelinhalt -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="24dp"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Artikelname -->
+                <TextView
+                    android:id="@+id/tvArtikelName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Artikelname"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="@color/fab_green"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Kategorie -->
+                <TextView
+                    android:id="@+id/tvKategorie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kategorie: "
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp"
+                    android:lineSpacingExtra="4dp" />
+
+                <!-- Kühlung -->
+                <TextView
+                    android:id="@+id/tvKuehlung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kühlung: "
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="8dp"
+                    android:lineSpacingExtra="4dp" />
+
+                <!-- Haltbarkeit -->
+                <TextView
+                    android:id="@+id/tvHaltbarkeit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Haltbar bis: "
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="16dp"
+                    android:lineSpacingExtra="4dp" />
+
+                <!-- Produktbild Überschrift -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Produktbild:"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Produktbild -->
+                <ImageView
+                    android:id="@+id/ivArtikelBild"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/bg_artikel_item"
+                    android:contentDescription="Produktbild"
+                    android:layout_marginBottom="24dp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Unten fixierte Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/btnBearbeiten"
+                style="@style/StandardButton"
+                android:text="Bearbeiten"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnLoeschen"
+                style="@style/StandardButton"
+                android:text="Löschen"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

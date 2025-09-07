@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vorlageAuswaehlenRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <!-- Weißer Kopfbereich -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/pageTitle"
+            style="@style/StandardTitel"
+            android:text="Vorlage auswählen" />
+    </LinearLayout>
+
+    <!-- Trennlinie -->
+    <View style="@style/StandardTrennlinie" />
+
+    <!-- Inhaltsbereich -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="16dp"
+        android:background="@color/bg_gray">
+
+        <ListView
+            android:id="@+id/lvVorlagen"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/btnNeueVorlage"
+            style="@style/StandardButton"
+            android:text="Neue Vorlage erstellen" />
+    </LinearLayout>
+</LinearLayout>

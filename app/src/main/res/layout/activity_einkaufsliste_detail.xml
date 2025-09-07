@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/einkaufslisteBearbeitenRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <!-- Titelbereich -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/pageTitle"
+            style="@style/StandardTitel"
+            android:text="@string/title_einkaufsliste_bearbeiten" />
+    </LinearLayout>
+
+    <!-- Trennlinie -->
+    <View style="@style/StandardTrennlinie" />
+
+    <!-- Artikelbereich mit Scroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:background="@color/bg_gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tvListenTitel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <LinearLayout
+                android:id="@+id/lvArtikel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Fester Block für Buttons (immer 300dp hoch) -->
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="bottom"
+        android:background="@color/bg_gray">
+
+        <Button
+            android:id="@+id/btnSpeichern"
+            android:text="Speichern"
+            style="@style/StandardButton"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btnArtikelHinzufügen"
+            android:text="@string/btn_artikel_hinzufuegen"
+            style="@style/StandardButton" />
+
+        <Button
+            android:id="@+id/btnVorlageHinzufügen"
+            android:text="@string/btn_vorlage_hinzufuegen"
+            style="@style/StandardButton" />
+    </LinearLayout>
+</LinearLayout>

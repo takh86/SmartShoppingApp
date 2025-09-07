@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <!-- Weißer Kopfbereich -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/pageTitle"
+            style="@style/StandardTitel"
+            android:text="@string/title_artikel_hinzufuegen" />
+    </LinearLayout>
+
+    <!-- Trennlinie -->
+    <View style="@style/StandardTrennlinie" />
+
+    <!-- Grauer Bereich mit Inhalt + fixiertem Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/bg_gray">
+
+        <!-- Scrollbarer Inhalt -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Artikelname -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Artikelname"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp" />
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="z. B. Apfel"
+                    android:backgroundTint="@color/fab_green"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Kategorie -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kategorie"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp" />
+
+                <Spinner
+                    android:id="@+id/spKategorie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Kühlung -->
+                <CheckBox
+                    android:id="@+id/cbKuehlung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Benötigt Kühlung"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Haltbarkeit -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Haltbarkeit (in Tagen)"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="4dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <Button
+                        android:id="@+id/btnMinusHaltbarkeit"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:text="-"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:background="@color/light_gray" />
+
+                    <EditText
+                        android:id="@+id/etHaltbarkeitTage"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:inputType="number"
+                        android:hint="1"
+                        android:backgroundTint="@color/fab_green"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:layout_marginHorizontal="16dp" />
+
+                    <Button
+                        android:id="@+id/btnPlusHaltbarkeit"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:text="+"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:background="@android:color/darker_gray" />
+                </LinearLayout>
+
+                <!-- Foto aufnehmen -->
+                <Button
+                    android:id="@+id/btnFoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Foto aufnehmen"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Bildvorschau -->
+                <ImageView
+                    android:id="@+id/ivFoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="#E0E0E0"
+                    android:contentDescription="Artikelbild"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Fixierter Speichern-Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/btnSpeichern"
+                style="@style/StandardButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Speichern"
+                android:padding="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

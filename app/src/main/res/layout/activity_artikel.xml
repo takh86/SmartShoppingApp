@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/artikelScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <!-- Weißer Kopfbereich mit Titel -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/pageTitle"
+                style="@style/StandardTitel"
+                android:text="@string/title_artikel" />
+        </LinearLayout>
+
+        <!-- Trennlinie -->
+        <View style="@style/StandardTrennlinie" />
+
+        <!-- ListView-Bereich -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_gray"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp">
+
+            <ExpandableListView
+                android:id="@+id/expandableArtikelListe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/fabAddArtikel"
+                android:layout_marginBottom="-1dp"
+                android:background="@android:color/transparent"
+                android:divider="@color/fab_green"
+                android:dividerHeight="1dp"
+                android:groupIndicator="@null" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabAddArtikel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="16dp"
+                android:src="@android:drawable/ic_input_add"
+                app:tint="@android:color/white"
+                app:backgroundTint="@color/fab_green"
+                android:contentDescription="@string/title_artikel_hinzufuegen" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

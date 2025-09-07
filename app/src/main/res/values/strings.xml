@@ -1,0 +1,60 @@
+<resources>
+    <!--Startseite-->
+    <string name="app_name">SmartShoppingApp</string>
+    <string name="title_artikel">Artikel verwalten</string>
+    <string name="title_rezept">Rezepte verwalten</string>
+    <string name="title_speiseplan">Speiseplan verwalten</string>
+    <string name="title_einkaufsliste">Einkaufslisten verwalten</string>
+
+
+    <!--Artikelverwaltung Seite-->
+    <string name="title_artikel_hinzufuegen">Artikel anlegen/ändern</string>
+
+
+
+
+
+    <!--Rezepteverwaltung Seite-->
+    <string name="title_rezept_hinzufuegen">Rezept hinzufügen</string>
+    <string name="hint_rezeptname">Rezeptname</string>
+    <string name="hint_beschreibung">Beschreibung</string>
+    <string name="btn_zutaten_auswaehlen">Zutaten auswählen</string>
+    <string name="text_keine_zutaten">Keine Zutaten gewählt</string>
+    <string name="btn_rezept_speichern">Rezept speichern</string>
+    <string name="text_ausgewaehlte_zutaten">Ausgewählte Zutaten:</string>
+
+
+
+    <!--Speiseplanverwaltung Seite-->
+    <string name="btn_generiere_einkaufsliste">Einkaufsliste aus Speiseplan generieren</string>
+    <string name="title_essensplan_bearbeiten">Essensplan bearbeiten</string>
+
+
+
+    <!--Einkaufslisteverwaltung Seite-->
+    <string name="btn_neue_liste">Neue Liste</string>
+    <string name="title_einkaufsliste_bearbeiten">Einkaufsliste anzeigen/ändern</string>
+    <string name="btn_artikel_hinzufuegen">Artikel hinzufügen</string>
+    <string name="btn_vorlage_hinzufuegen">Aus Vorlage hinzufügen</string>
+    <string name="title_vorlage_detail">Vorlage</string>
+    <string name="vorlage_verwenden">Vorlage verwenden</string>
+    <string name="neue_liste">Neue Einkaufsliste</string>
+
+
+    <string name="title_vorlagen">Vorlagen</string>
+    <string name="btn_neue_vorlage">Neue Vorlage erstellen</string>
+
+
+    <string name="title_vorlage_artikel_uebernehmen">Vorlage-Artikel übernehmen</string>
+    <string name="btn_artikel_uebernehmen">Ausgewählte Artikel übernehmen</string>
+
+
+    <string name="label_tag">Speiseplan für</string>
+    <string name="prompt_vorspeise">Vorspeise auswählen</string>
+    <string name="prompt_hauptgericht">Hauptgericht auswählen</string>
+    <string name="prompt_beilage">Beilage auswählen</string>
+    <string name="prompt_nachspeise">Nachspeise auswählen</string>
+
+
+</resources>
+
